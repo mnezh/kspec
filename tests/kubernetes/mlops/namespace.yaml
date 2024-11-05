@@ -1,0 +1,92 @@
+---
+name: mlops
+pods:
+  deployer:
+  gateway:
+  influxdb:
+  ingest:
+  monitoring-app-backend:
+  monitoring-app-backend-postgresql:
+  deployment-server-postgresql:
+  rabbitmq:
+  storage:
+  storage-postgresql:
+secrets:
+  mlops-deployment-server:
+    - ADDRESS
+    - DATABASE_CONNECTION
+    - LOG_LEVEL
+  mlops-deployment-server-postgresql:
+    - password
+    - postgres-password
+  mlops-drift:
+    - INFLUX_HOST
+    - INFLUX_PORT
+    - MLOPS_LINKERD_ENABLED
+    - RMQ_DRIFT_PASSWORD
+    - RMQ_DRIFT_USER
+    - RMQ_DRIFT_VHOST
+    - RMQ_HOST
+    - RMQ_PORT
+  mlops-environment:
+    - license.sig
+  mlops-monitoring-app-backend-postgresql:
+    - password
+    - postgres-password
+  mlops-rabbitmq:
+    - rabbitmq-password
+    - rabbitmq-erlang-cookie
+  mlops-rabbitmq-config:
+    - rabbitmq.conf
+  mlops-storage:
+    - DATABASE_CONNECTION
+  mlops-storage-postgresql:
+    - password
+    - postgres-password
+  mlops-wave-app:
+    - APP_DATA_DIR
+    - DYNAMIC_STATUS_UPDATE_INTERVAL
+    - ESCORER_APP_URL
+    - H2O_WAVE_DATA_DIR
+    - H2O_WAVE_KEEP_APP_ALIVE
+    - H2O_WAVE_NO_AUTOSTART
+    - H2O_WAVE_OIDC_CLIENT_ID
+    - H2O_WAVE_OIDC_CLIENT_SECRET
+    - H2O_WAVE_OIDC_END_SESSION_URL
+    - H2O_WAVE_OIDC_PROVIDER_URL
+    - H2O_WAVE_OIDC_REDIRECT_URL
+    - H2O_WAVE_OIDC_SCOPES
+    - H2O_WAVE_OIDC_SKIP_LOGIN
+    - H2O_WAVE_POST_REDIRECT_URL
+    - MLFLOW_EXPERIMENT_IMPORT_ENABLED
+    - MLOPS_AUTH_CA_FILE_OVERRIDE
+    - MLOPS_DOCUMENTATION_URL
+    - MODEL_MONITORING_ENABLED
+    - REQUESTS_CA_BUNDLE
+    - STORAGE_URL
+  mlops-monitoring-app-backend:
+    - CLIENT_ID
+    - CLIENT_SECRET
+    - DEPLOYER_CA_CERT_PATH
+    - DEPLOYER_LOCATION
+    - DEPLOYER_NEGOTIATION_TYPE
+    - DEPLOYER_TLS_CERT_PATH
+    - DEPLOYER_TLS_ENABLED
+    - DEPLOYER_TLS_KEY_PATH
+    - INFLUX_PASSWORD
+    - INFLUX_URL
+    - INFLUX_USER
+    - JAVA_TOOL_OPTIONS
+    - MLOPS_LINKERD_ENABLED
+    - POSTGRES_CONNECTION_STRING
+    - SERVICE_CA_CERT_PATH
+    - SERVICE_TLS_CERT_PATH
+    - SERVICE_TLS_ENABLED
+    - SERVICE_TLS_KEY_PATH
+    - STORAGE_CA_CERT_PATH
+    - STORAGE_LOCATION
+    - STORAGE_NEGOTIATION_TYPE
+    - STORAGE_TLS_CERT_PATH
+    - STORAGE_TLS_ENABLED
+    - STORAGE_TLS_KEY_PATH
+    - TOKEN_INTROSPECTION_ENDPOINT

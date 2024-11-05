@@ -1,0 +1,9 @@
+---
+appstore_prefix: h2oaicloud
+namespaces:
+  appstore: appstore
+  mlops: mlops
+  keycloak: keycloak
+  featurestore: featurestore
+  kafka: kafka
+  redis: redis

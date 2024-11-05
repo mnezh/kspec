@@ -1,0 +1,10 @@
+---
+name: keycloak
+pods: keycloak
+tls_cn_pattern: CN=test,OU=Replicated,O=H2O.ai,L=NA,ST=NA,C=XX
+secrets:
+  keycloak-postgresql:
+    - password
+    - postgres-password
+  keycloak:
+    - admin-password

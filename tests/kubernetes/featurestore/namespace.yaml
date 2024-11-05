@@ -1,0 +1,27 @@
+---
+name: featurestore
+pods:
+  featurestore-core:
+  featurestore-online-store:
+  featurestore-postgresql:
+  featurestore-spark-operator:
+  featurestore-web:
+secrets:
+  featurestore-core:
+    - idp.client-secret
+    - job.encryption-key
+    - pat.token-salt
+  featurestore-database-dsn:
+    - dsn
+  featurestore-online-db-credentials:
+    - online.redis.secret
+  featurestore-postgresql:
+    - password
+    - postgres-password
+  featurestore-storage-offline-credentials:
+    - storage.offline.password
+    - storage.offline.username
+  featurestore-storage-supporting-credentials:
+    - storage.supporting.password
+    - storage.supporting.username
+

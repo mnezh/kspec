@@ -1,0 +1,28 @@
+"""
+Kubernetes {class_name}
+"""
+from typing import Generator
+
+from kubernetes.client import CoreV1Api
+from {module_name} import {import_class_name}
+
+from k8satifying.base import {base_class}, KubernetesObjectList
+
+
+class {class_name}({base_class}, {import_class_name}):
+    """Kubernetes secret"""
+
+    pass
+
+
+class {class_name}List(KubernetesObjectList):
+    """Typed list of kubernetes secrets"""
+
+    def __init__(self, k8s: CoreV1Api, raw_list: list):
+        super().__init__(k8s, raw_list, {class_name})
+
+    def __getitem__(self, item) -> {class_name} | list[{class_name}]:
+        return super().__getitem__(item)
+
+    def __iter__(self) -> Generator[{class_name}, None, None]:
+        return super().__iter__()

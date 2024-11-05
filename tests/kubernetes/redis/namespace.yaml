@@ -1,0 +1,7 @@
+---
+name: redis
+pods:
+  redis-cluster:
+secrets:
+  redis-cluster:
+    - redis-password

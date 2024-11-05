@@ -1,0 +1,14 @@
+---
+name: authz
+pods:
+    authz-policyserver:
+    authz-userserver:
+    authz-workspaceserver:
+secrets:
+    authz-policyserver-db:
+        - POSTGRES_CONNECTION
+    authz-workspaceserver-db:
+        - POSTGRES_CONNECTION
+    authz-userserver-keycloak:
+        - KEYCLOAK_CLIENT_ID
+        - KEYCLOAK_CLIENT_SECRET
